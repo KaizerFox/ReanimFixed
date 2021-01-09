@@ -7,8 +7,8 @@ local NetworkAccess = coroutine.create(function()
     while true do game:GetService("RunService").RenderStepped:Wait()
     local TBL = game:GetService("Players"):GetChildren() 
     for _ = 1,#TBL do local Players = TBL[_]
-    if Players ~= game:GetService("Players").LocalPlayer then sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 0.1 )) sethidden(Player, "SimulationRadius", 0) end end
-    while wait() do sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", math.pow(math.huge,math.huge) )) end
+    if Players ~= game:GetService("Players").LocalPlayer then sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 0.1) sethidden(Player, "SimulationRadius", 0) end end
+    while wait() do sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", math.pow(math.huge,math.huge)) end
     sethidden(Player, "SimulationRadius", math.huge*math.huge) end end)
     coroutine.resume(NetworkAccess) local TService = game:GetService("TweenService")
     
@@ -186,3 +186,5 @@ local NetworkAccess = coroutine.create(function()
     game:GetService("Players").LocalPlayer:GetPropertyChangedSignal("DevCameraOcclusionMode"):Connect(invisCam)
     
     MainFrame:TweenPosition(UDim2.new(0.5,-175,-1,0),"Out","Sine",0.5)TextBar.BackgroundColor3=Color3.fromRGB(0,0,255)MainFrame:TweenSize(UDim2.new(0,350,0,80),"Out","Sine",0.5)wait()TextBar:TweenSizeAndPosition(UDim2.new(1,0,0,5),UDim2.new(0,0,1,-5),"Out","Sine",0.1)GUI:Destroy()
+
+wait()
