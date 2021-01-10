@@ -37,7 +37,7 @@ coroutine.wrap(function()
     until nil
 end)()
 
-repeat wait()
+while wait() do
 sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 100000000000000000000000000)
 sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 100000000000000000000000000)
 end
