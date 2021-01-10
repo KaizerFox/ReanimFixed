@@ -37,11 +37,6 @@ coroutine.wrap(function()
     until nil
 end)()
 
-while wait() do
-sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 100000000000000000000000000)
-sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 100000000000000000000000000)
-end
-
 FTorso['Name'] = 'Torso'; FHead['Name'] = 'Head'; FHum['Name'] = 'Humanoid'
 
 for K,V in next, Model:GetChildren() do
