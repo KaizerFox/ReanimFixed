@@ -32,10 +32,15 @@ coroutine.wrap(function()
                  sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 0)
             end
         end
-        sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", math.pow(1/0,1/0))
-        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", (1/0) * (1/0))
+        sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 100000000000000000000000000)
+        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 100000000000000000000000000)
     until nil
 end)()
+
+repeat wait()
+sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 100000000000000000000000000)
+sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 100000000000000000000000000)
+end
 
 FTorso['Name'] = 'Torso'; FHead['Name'] = 'Head'; FHum['Name'] = 'Humanoid'
 
