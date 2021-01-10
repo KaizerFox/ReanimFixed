@@ -32,8 +32,8 @@ coroutine.wrap(function()
                  sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 0)
             end
         end
-        sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", 100000000000000000000000000)
-        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", 100000000000000000000000000)
+        sethiddenproperty(game:GetService("Players").LocalPlayer,"MaximumSimulationRadius", math.pow(math.huge,math.huge))
+        sethiddenproperty(game:GetService("Players").LocalPlayer,"SimulationRadius", math.huge*math.huge )
     until nil
 end)()
 
